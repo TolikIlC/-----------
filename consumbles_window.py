@@ -73,4 +73,5 @@ class ConsumblesWindow(ctk.CTkToplevel):
         self.consumables = self.database.get_all_repair_consumables()
 
         for consumable in self.consumables:
-            checkbox = ctk.CTkCheckBox(self.)
+            checkbox = ctk.CTkCheckBox(self.consumable_frame, text=f"{consumable['id']} - {consumable['name']} (Количество: {consumable['quantity']})")
+            checkbox.pack(anchor='w', padx=10, pady=5)
